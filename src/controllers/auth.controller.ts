@@ -26,7 +26,6 @@ class AuthController {
       process.env.JWT_KEY!
     );
 
-    // @ts-ignore
     req.session = {
       jwt: userJwt,
     };
@@ -58,7 +57,6 @@ class AuthController {
       process.env.JWT_KEY!
     );
 
-    // @ts-ignore
     req.session = {
       jwt: userJwt,
     };
