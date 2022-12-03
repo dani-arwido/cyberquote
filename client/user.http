@@ -1,0 +1,18 @@
+### Index Users
+GET http://localhost:3000/api/users HTTP/1.1
+
+### Index Users by Email
+GET http://localhost:3000/api/users?emaisl=test1@test.com HTTP/1.1
+
+### Delete Users
+DELETE http://localhost:3000/api/users/6389e0d3a20509f25a28216a HTTP/1.1
+
+### Update Users
+PUT http://localhost:3000/api/users/6289e18748d6c0ab155c9e92 HTTP/1.1
+Content-Type: application/json
+
+{
+	"email": "test22@test.com",
+	"password": "test111"
+}
+

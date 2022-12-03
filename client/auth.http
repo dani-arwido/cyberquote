@@ -1,0 +1,25 @@
+### Signup user
+POST http://localhost:3000/api/auth/signup HTTP/1.1
+Content-Type: application/json
+
+{
+	"email": "user4@abc.com",
+	"password": "abc"
+}
+
+### Signin user
+POST http://localhost:3000/api/auth/signin HTTP/1.1
+Content-Type: application/json
+
+{
+	"email": "user1@abc.com",
+	"password": "abc"
+}
+
+### Signout user
+POST http://localhost:3000/api/auth/signout HTTP/1.1
+
+
+### Current user
+GET http://localhost:3000/api/auth/currentUser HTTP/1.1
+
