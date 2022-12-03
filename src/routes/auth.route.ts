@@ -44,7 +44,6 @@ router.post(
 router.post(
   '/api/auth/signout',
   (req: Request, res: Response, next: NextFunction) => {
-    // @ts-ignore
     req.session = null;
 
     res.send({});

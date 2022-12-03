@@ -10,6 +10,7 @@ declare global {
   namespace Express {
     interface Request {
       currentUser?: UserPayload;
+      session: any;
     }
   }
 }
@@ -19,14 +20,12 @@ export const currentUser = (
   res: Response,
   next: NextFunction
 ) => {
-  // @ts-ignore
   if (!req.session?.jwt) {
     return next();
   }
 
   try {
     const payload = jwt.verify(
-      // @ts-ignore
       req.session.jwt,
       process.env.JWT_KEY!
     ) as UserPayload;
